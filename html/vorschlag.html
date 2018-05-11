@@ -30,16 +30,20 @@
 		</nav></header>
 		
 		<main>
-			<div class="container">
-				<div class="row center">
-					<div class="input-field row center">
-						<input id="vorschlag" type="text" class="">
-						<label for="vorschlag">Vorschlag:</label>
-					</div>
-					<button class="btn waves-effect waves-light orange" onclick="addVorschlag()">Senden<i class="material-icons right">send</i></button>
-				</div>
+			<div class="row">
+			<form class="col s12">
+			<div class="row">
+			<div class="input-field col s12">
+				<textarea id="textarea1" class="materialize-textarea"></textarea>
+				<label for="textarea1">Vorschlag einreichen</label>
+				<span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
 			</div>
-		</main>
+			</div>
+			</form>
+			</div>
+        </main>
+		
+		
 		
 		<footer class="page-footer orange">
 			<div class="container">
