@@ -2,7 +2,7 @@ function addVorschlag()
 {
    var vorschlag = document.getElementById("vorschlag").value
     console.log(vorschlag);
-	clearContent(document.getElementById("vorschlag"));
+	document.getElementById("vorschlag").value='';
 }
 
 function clearContent(element){
