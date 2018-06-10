@@ -10,7 +10,7 @@
 		<link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 		<link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	</head>
-	
+
 	<body>
 		<header><nav class="grey lighten-1" role="navigation">
 			<div class="nav-wrapper container"><a id="logo-container" href="../index.html" class="brand-logo">Startseite</a>
@@ -28,7 +28,7 @@
 				<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 			</div>
 		</nav></header>
-		
+
 		<main>
 			<br><br><br>
 			<div class="container">
@@ -42,9 +42,9 @@
 				<button class="btn waves-effect waves-light orange" type="button" onclick="addVorschlag()">Senden<i class="material-icons right">send</i></button>
 			</form>
 			</div>
-			</div>	
+			</div>
 		</main>
-		
+
 		<footer class="page-footer orange">
 			<div class="container">
 				<div class="row">
