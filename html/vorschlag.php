@@ -33,13 +33,13 @@
 			<br><br><br>
 			<div class="container">
 			<div class="row center">
-				<form class="col s12">
+				<form class="col s12" method="post" action="vorschlag.php">
 				<div class="input-field row center">
-					<textarea id="vorschlag" class="materialize-textarea" onfocus="clearContent(this);">Hast du gute Ideen für Themen in der Zukunft? Würdest du gerne etwas ändern? Dann schreib es einfach hier rein</textarea>
+					<input id="vorschlag" name="vorschlag" class="materialize-textarea" type="text">Hast du gute Ideen für Themen in der Zukunft? Würdest du gerne etwas ändern? Dann schreib es einfach hier rein</input>
 					<label for="vorschlag">Vorschlag:</label>
 					<!--span class="helper-text" data-error="wrong" data-success="right"></span-->
 				</div>
-				<button class="btn waves-effect waves-light orange" type="button" onclick="addVorschlag()">Senden<i class="material-icons right">send</i></button>
+				<input type="submit" class="btn waves-effect waves-light orange"></input>
 			</form>
 			</div>
 			</div>
@@ -79,6 +79,6 @@
 		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="../js/materialize.js"></script>
 		<script src="../js/init.js"></script>
-		<script src="../js/vorschlag.js"></script>
+
 	</body>
 </html>
