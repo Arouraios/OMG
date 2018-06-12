@@ -41,11 +41,15 @@
 				</div>
 				<input type="submit" class="btn waves-effect waves-light orange" value="Senden"></input>
 				<?php
+				if(isset($_POST['vorschlag']))
+				{
 						$file = '../vs.txt';
 						$fh = fopen($file, 'a') or die('could not open file');
-						$vorschlag = print_r($_POST['vorschlag'])+'\n';
-						fwrite($fh, $vorschlag);
+						$vorschlag = $_POST['vorschlag'].PHP_EOL;
+						echo $vorschlag;
+						fwrite($fh, $vorschlag) or die("could not write to file");
 						fclose($fh);
+					}
 					?>
 
 			</form>
