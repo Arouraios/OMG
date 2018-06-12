@@ -39,9 +39,9 @@
 					<label for="vorschlag">Vorschlag:</label>
 					<!--span class="helper-text" data-error="wrong" data-success="right"></span-->
 				</div>
-				<input type="submit" class="btn waves-effect waves-light orange" value="Senden"></input>
+				<input type="submit" class="medium waves-effect waves-light orange" value="Senden"></input>
 				<?php
-				if(isset($_POST['vorschlag']))
+				if(isset($_POST['vorschlag']) && !empty($_POST['vorschlag']))
 				{
 						$file = '../vs.txt';
 						$fh = fopen($file, 'a') or die('could not open file');
