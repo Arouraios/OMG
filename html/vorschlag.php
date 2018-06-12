@@ -41,12 +41,13 @@
 				</div>
 				<input type="submit" class="btn waves-effect waves-light orange" value="Senden"></input>
 				<?php
-						$file = "vs.txt";
-						$fh = fopen($file, "a");
-
-						fwrite($fh, print_r($_POST["vorschlag"]));
+						$file = '../vs.txt';
+						$fh = fopen($file, 'a') or die('could not open file');
+						$vorschlag = print_r($_POST['vorschlag'])+'\n';
+						fwrite($fh, $vorschlag);
 						fclose($fh);
 					?>
+
 			</form>
 			</div>
 			</div>
