@@ -35,15 +35,24 @@
 			<div class="row center">
 				<form class="col s12" method="post" action="vorschlag.php">
 				<div class="input-field row center">
-					<input id="vorschlag" name="vorschlag" class="materialize-textarea" type="text">Hast du gute Ideen für Themen in der Zukunft? Würdest du gerne etwas ändern? Dann schreib es einfach hier rein</input>
+					<input id="vorschlag" name="vorschlag" class="materialize-textarea" type="text"></input>
 					<label for="vorschlag">Vorschlag:</label>
 					<!--span class="helper-text" data-error="wrong" data-success="right"></span-->
 				</div>
-				<input type="submit" class="btn waves-effect waves-light orange"></input>
+				<input type="submit" class="btn waves-effect waves-light orange" value="Senden"></input>
+				<?php
+						$file = "vs.txt";
+						$fh = fopen($file, "a");
+
+						fwrite($fh, print_r($_POST["vorschlag"]));
+						fclose($fh);
+					?>
 			</form>
 			</div>
 			</div>
 		</main>
+
+
 
 		<footer class="page-footer orange">
 			<div class="container">
