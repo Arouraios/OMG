@@ -20,10 +20,13 @@
 				<ul class="right hide-on-med-and-down">
 					<li><a href="./team.html">Das Team</a></li>
 					<li><a href="./bisher.html">Bisherige Themen</a></li>
-					<li><a href="./vorschlag.html">Thema vorschlagen</a></li>
+					<li><a href="./vorschlag.php">Thema vorschlagen</a></li>
 				</ul>
 				<ul id="nav-mobile" class="sidenav">
-					<li><a href="#">Navbar Link</a></li>
+					<li><a href="../index.html">Startseite</a></li>
+					<li><a href="./team.html">Das Team</a></li>
+					<li><a href="./bisher.html">Bisherige Themen</a></li>
+					<li><a href="./vorschlag.php">Thema vorschlagen</a></li>
 				</ul>
 				<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 			</div>
@@ -34,15 +37,14 @@
 			<div class="container">
 			<div class="row center">
 				<form class="col s12" method="post" action="vorschlag.php">
-				<div class="input-field row center">
-					<input id="vorschlag" name="vorschlag" class="materialize-textarea" type="text"></input>
-					<label for="vorschlag">Vorschlag:</label>
-					<!--span class="helper-text" data-error="wrong" data-success="right"></span-->
-				</div>
-				<input type="submit" class="medium waves-effect waves-light orange" value="Senden"></input>
-				<?php
-				if(isset($_POST['vorschlag']) && !empty($_POST['vorschlag']))
-				{
+					<div class="input-field row center">
+						<input id="vorschlag" name="vorschlag" class="materialize-textarea" type="text"></input>
+						<label for="vorschlag">Vorschlag:</label>
+					</div>
+					<button type="submit" class="btn-large waves-effect waves-light orange"><i class="material-icons right">chevron_right</i>Senden</button>
+					<?php
+					if(isset($_POST['vorschlag']) && !empty($_POST['vorschlag']))
+					{
 						$file = '../vs.txt';
 						$fh = fopen($file, 'a') or die('could not open file');
 						$vorschlag = $_POST['vorschlag'].PHP_EOL;
@@ -50,8 +52,7 @@
 						fclose($fh);
 					}
 					?>
-
-			</form>
+				</form>
 			</div>
 			</div>
 		</main>
