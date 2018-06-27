@@ -23,10 +23,11 @@
 					<li><a href="./vorschlag.php">Thema vorschlagen</a></li>
 				</ul>
 				<ul id="nav-mobile" class="sidenav">
-					<li><a href="../index.html">Startseite</a></li>
-					<li><a href="./team.html">Das Team</a></li>
-					<li><a href="./bisher.html">Bisherige Themen</a></li>
-					<li><a href="./vorschlag.php">Thema vorschlagen</a></li>
+					<li class="grey grey-text"><a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>a</li>
+					<li><a href="../index.html" class="white-text">Startseite</a></li>
+					<li><a href="./team.html" class="white-text">Das Team</a></li>
+					<li><a href="./bisher.html" class="white-text">Bisherige Themen</a></li>
+					<li><a href="./vorschlag.php" class="white-text">Thema vorschlagen</a></li>
 				</ul>
 				<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 			</div>
