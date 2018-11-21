@@ -7,6 +7,17 @@
   background-color: #e51c23 !important;
 }
 
+.test{
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+.bar {
+	padding-left: 10%;
+	width: 80%;
+	height: 2%;
+}
+
  body {
 	display: flex;
     min-height: 100vh;
