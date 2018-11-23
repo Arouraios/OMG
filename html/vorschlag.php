@@ -13,10 +13,8 @@
 
 	<body>
 		<header><nav class="grey lighten-1" role="navigation">
-			<div class="nav-wrapper container"><a id="logo-container" href="../index.html" class="brand-logo">OMG</a>
-				<ul class="left hide-on-med-and-down">
-					<li><a href="../index.html"></a></li>
-				</ul>
+			<div class="nav-wrapper container">
+				<a href="../index.html"><img src="../images/OMG.png" alt="OMG" heigt=5% width=5%></img></a>
 				<ul class="right hide-on-med-and-down">
 					<li><a href="../index.html">Startseite</a></li>
 					<li><a href="./team.html">Das Team</a></li>
@@ -43,15 +41,15 @@
 						<input id="vorschlag" name="vorschlag" class="materialize-textarea" type="text"></input>
 						<label for="vorschlag">Vorschlag:</label>
 					</div>
-					<button type="submit" class="btn-large waves-effect waves-light orange"><i class="material-icons right">chevron_right</i>Senden</button>
+					<button type="submit" class="btn-large waves-effect waves-light orange" onClick="save()"><i class="material-icons right">chevron_right</i>Senden</button>
 					<?php
 					if(isset($_POST['vorschlag']) && !empty($_POST['vorschlag']))
 					{
-						$file = '../vs.txt';
-						$fh = fopen($file, 'a') or die('could not open file');
+						$path = '../text/feedback.txt';
+						$file = fopen($path, 'a') or die('could not open file');
 						$vorschlag = $_POST['vorschlag'].PHP_EOL;
-						fwrite($fh, $vorschlag) or die("could not write to file");
-						fclose($fh);
+						fwrite($file, $vorschlag) or die("could not write to file");
+						fclose($file);
 					}
 					?>
 				</form>
@@ -94,6 +92,19 @@
 		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="../js/materialize.js"></script>
 		<script src="../js/init.js"></script>
-
+		<script>
+			function save(){
+				var text = getElementById('vorschlag
+				var txtFile = new File("/text/feedback.txt");
+				txtFile.writeln(text);
+				txtFile.close();
+			}
+			function test(){
+			dateisystem.root.getFile("/text/feedback.txt", {}, function(datei){
+					dateisystem.root.getDirectory("/text/" {}, function(verzeichis){
+						datei.moveTo(verzeichnis);
+					});
+				});
+			}
 	</body>
 </html>

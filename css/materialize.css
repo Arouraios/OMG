@@ -14,8 +14,10 @@
 
 .bar {
 	padding-left: 10%;
-	width: 80%;
-	height: 2%;
+	width: 90%;
+	height: 1%;
+	margin-bottom: 5%;
+	margin-top: 5%;
 }
 
  body {
