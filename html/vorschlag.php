@@ -50,6 +50,12 @@
 						$vorschlag = $_POST['vorschlag'].PHP_EOL;
 						fwrite($file, $vorschlag) or die("could not write to file");
 						fclose($file);
+						$empfaenger = 'omg-jetztsindwirdran@web.de';
+						$betreff = 'Neues Feedback vom '.date('l j n Y H:i:s');;
+						$nachricht = $vorschlag;
+						$header = 'From: OMG-Website' . "\r\n" .
+								'X-Mailer: PHP/' . phpversion();
+						mail($empfaenger, $betreff, $nachricht, $header);
 					}
 					?>
 				</form>
