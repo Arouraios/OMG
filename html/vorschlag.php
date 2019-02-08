@@ -33,7 +33,15 @@
 		</nav></header>
 
 		<main>
-			<br><br><br>
+			<div class="section no-pad-bot" id="index-banner">
+				<div class="container">
+					<br><br>
+					<h1 class="header center orange-text">Feedback</h1>
+					<div class="row center">
+						<h5 class="header col s12 light">Wenn ihr Verbesserungsvorschläge oder Ideen für weitere Themen habt, dann schreibt diese einfach in das Feld!</h5>
+					</div>
+				</div>
+			</div>
 			<div class="container">
 			<div class="row center">
 				<form class="col s12" method="post" action="vorschlag.php">
@@ -47,7 +55,7 @@
 					{
 						$path = '../text/feedback.txt';
 						$file = fopen($path, 'a') or die('could not open file');
-						$vorschlag = $_POST['vorschlag'].PHP_EOL;
+						$vorschlag = 'Feedback vom '.date('l j n Y H:i:s') . ': ' . $_POST['vorschlag'].PHP_EOL;
 						fwrite($file, $vorschlag) or die("could not write to file");
 						fclose($file);
 						$empfaenger = 'omg-jetztsindwirdran@web.de';
