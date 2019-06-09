@@ -20,6 +20,7 @@
 					<li><a href="./team.html">Das Team</a></li>
 					<li><a href="./termine.html">Termine</a></li>
 					<li class ="active"><a href="./vorschlag.php">Thema vorschlagen</a></li>
+					<li><button type="button" name="dark_light" onclick="darker()" title="Toggle dark/light mode">🌛</button></li>
 				</ul>
 				<ul id="nav-mobile" class="sidenav">
 					<li class="grey grey-text"><a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>a</li>
@@ -120,5 +121,26 @@
 					});
 				});
 			}
+		</script>
+		<script>
+			document.body.style.backgroundColor = sessionStorage.getItem('bg');
+			document.body.style.color = sessionStorage.getItem('cc');
+			function darker() {
+				if ( sessionStorage.getItem('bg') === 'rgb(255, 255, 255)') {
+					sessionStorage.setItem('bg', 'rgb(40, 40, 40)');
+					sessionStorage.setItem('cc', '#777');
+				}
+				else if (sessionStorage.getItem('bg') == null || undefined) {
+					sessionStorage.setItem('bg', 'rgb(40, 40, 40)');
+					sessionStorage.setItem('cc', '#777');
+				}
+				else if( sessionStorage.getItem('bg') === 'rgb(40, 40, 40)') {
+					sessionStorage.setItem('bg', 'rgb(255, 255, 255)');
+					sessionStorage.setItem('cc', '#333');
+				}
+				document.body.style.backgroundColor = sessionStorage.getItem('bg');
+				document.body.style.color = sessionStorage.getItem('cc');
+			}
+		</script>
 	</body>
 </html>

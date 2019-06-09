@@ -4,14 +4,38 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
 		<title>OMG - jetzt sind wir dran!</title>
+		<!--<style>
+			body.dark-mode {
+				background-color: #262626;
+				color: #ffffff;
+				a {
+					color: #262626;
+				}	
+				button {
+					background-color: #ffffff;
+					color: #262626;
+				}
+			}
 
+			body.light-mode {
+				background-color: #ffffff;
+				color: #262626;
+				a {
+					color: #262626;
+				}
+				button {
+					background-color: #262626;
+					color: #ffffff;
+				}
+			}
+		</style>-->
 		<!-- CSS  -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	</head>
 	
-	<body>
+	<body style="background-color: rgb(255, 255, 255)">
 		<header><nav class="grey lighten-1" role="navigation">
 			<div class="nav-wrapper container">
 				<a id="logo-container" href="./index.html"><img src="./images/OMG.png" alt="OMG" heigt=5% width=5%></img></a>
@@ -20,6 +44,7 @@
 					<li><a href="./html/team.html">Das Team</a></li>
 					<li><a href="./html/termine.html">Termine</a></li>
 					<li><a href="./html/vorschlag.php">Thema vorschlagen</a></li>
+					<li><button type="button" name="dark_light" onclick="darker()" title="Toggle dark/light mode">🌛</button></li>
 				</ul>
 				<ul id="nav-mobile" class="sidenav">
 					<li class="grey grey-text"><a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>a</li>
@@ -59,7 +84,7 @@
 					<div class="icon-block">
 						<h2 class="center light-blue-text"><i class="material-icons">access_time</i></h2>
 						<h5 class="center">Wann findet das statt?</h5>
-						<p class="light">Der fünfte OMG wird am <u><b>Freitag den 14.06.</b></u> stattfinden und ungefähr eine Stunde dauern. Anschließend könnt ihr euch noch bei ein paar Brötchen und Snacks über die Themen und Denkanstöße unterhalten. Alle Termine könnt ihr unter <a href="./html/termine.html" class="orange-text"><u>Termine</u></a> einsehen.</p>
+						<p class="light">Der vierte OMG wird am <u><b>Freitag den 15.02.</b></u> stattfinden und ungefähr eine Stunde dauern. Anschließend könnt ihr euch noch bei ein paar Brötchen und Snacks über die Themen und Denkanstöße unterhalten. Danach geht es am <u><b>14.06.</b></u> mit dem fünften OMG weiter. Alle Termine könnt ihr unter <a href="./html/termine.html" class="orange-text"><u>Termine</u></a> einsehen.</p>
 					</div>
 					</div>
 
@@ -118,5 +143,25 @@
 		<script src="js/materialize.js"></script>
 		<script src="js/init.js"></script>
 		<script async defer src="https://www.instagram.com/embed.js"></script>
+		<script>
+			document.body.style.backgroundColor = sessionStorage.getItem('bg');
+			document.body.style.color = sessionStorage.getItem('cc');
+			function darker() {
+				if ( sessionStorage.getItem('bg') === 'rgb(255, 255, 255)') {
+					sessionStorage.setItem('bg', 'rgb(40, 40, 40)');
+					sessionStorage.setItem('cc', '#777');
+				}
+				else if (sessionStorage.getItem('bg') == null || undefined) {
+					sessionStorage.setItem('bg', 'rgb(40, 40, 40)');
+					sessionStorage.setItem('cc', '#777');
+				}
+				else if( sessionStorage.getItem('bg') === 'rgb(40, 40, 40)') {
+					sessionStorage.setItem('bg', 'rgb(255, 255, 255)');
+					sessionStorage.setItem('cc', '#333');
+				}
+				document.body.style.backgroundColor = sessionStorage.getItem('bg');
+				document.body.style.color = sessionStorage.getItem('cc');
+			}
+		</script>
 	</body>
 </html>

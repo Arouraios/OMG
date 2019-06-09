@@ -20,6 +20,7 @@
 					<li><a href="./team.html">Das Team</a></li>
 					<li class ="active"><a href="./termine.html">Termine</a></li>
 					<li><a href="./vorschlag.php">Thema vorschlagen</a></li>
+					<li><button type="button" name="dark_light" onclick="darker()" title="Toggle dark/light mode">🌛</button></li>
 				</ul>
 				<ul id="nav-mobile" class="sidenav">
 					<li class="grey grey-text"><a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>a</li>
@@ -39,7 +40,7 @@
 					<h3 class="grey-text test">Kommende OMG's:</h3>
 				</div>
 			</div>
-			<br><br><br>
+			<br><br>
 			<div class="section" id="index-banner">
 				<div class="container">
 					<div class="header center">
@@ -47,6 +48,42 @@
 						<h3 class="orange-text test">Höher, Schneller, Besser</h3>
 						<div class="row center test">
 							<h5 class="header col s12 light test">Leistungsdruck: Bin ich gut genug?<h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br><br>
+			<div class="section" id="index-banner">
+				<div class="container">
+					<div class="header center">
+						<h4 class="test">OMG am 06.09.19</h4>
+						<h3 class="orange-text test">Fridays For Future</h3>
+						<div class="row center test">
+							<h5 class="header col s12 light test">Umweltschützer oder Hype?<h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br><br>
+			<div class="section" id="index-banner">
+				<div class="container">
+					<div class="header center">
+						<h4 class="test">OMG am 15.11.19</h4>
+						<h3 class="orange-text test">Religionen und (k)ein Krieg</h3>
+						<!--<div class="row center test">
+							<h5 class="header col s12 light test">Leistungsdruck: Bin ich gut genug?<h5>
+						</div>-->
+					</div>
+				</div>
+			</div>
+			<br><br>
+			<div class="section" id="index-banner">
+				<div class="container">
+					<div class="header center">
+						<h4 class="test">OMG am 24.01.20</h4>
+						<h3 class="orange-text test">Social Media</h3>
+						<div class="row center test">
+							<h5 class="header col s12 light test">24/7 alles nur #gephotoshopt?<h5>
 						</div>
 					</div>
 				</div>
@@ -59,6 +96,18 @@
 					<h3 class="grey-text test">Vergangene OMG's:</h3>
 				</div>
 			</div>
+			<br><br>
+			<div class="section" id="index-banner">
+				<div class="container">
+					<div class="header center">
+						<h4 class="test">OMG am 15.02.19</h4>
+						<h3 class="orange-text test">Mensch schafft Gott</h3>
+						<div class="row center test">
+							<h5 class="header col s12 light test">Künstliche Intelligenz: Wie klug kann "künstlich" wirklich sein?<h5>
+						</div>
+					</div>
+				</div>
+			</div>
 			<br><br><br>
 			<div class="section" id="index-banner">
 				<div class="container">
@@ -68,18 +117,6 @@
 						<div class="row center test">
 							<h5 class="header col s12 light test">Weihnachten: Fluch oder Segen?<h5>
 					</div>
-					</div>
-				</div>
-			</div>
-			<br><br><br>
-			<div class="section" id="index-banner">
-				<div class="container">
-					<div class="header center">
-						<h4 class="test">OMG am 15.02.19</h4>
-						<h3 class="orange-text test">Mensch schafft Gott</h3>
-						<div class="row center test">
-							<h5 class="header col s12 light test">Künstliche Intelligenz: Wie klug kann "künstlich" wirklich sein?<h5>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -143,5 +180,25 @@
 		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="../js/materialize.js"></script>
 		<script src="../js/init.js"></script>
+		<script>
+			document.body.style.backgroundColor = sessionStorage.getItem('bg');
+			document.body.style.color = sessionStorage.getItem('cc');
+			function darker() {
+				if ( sessionStorage.getItem('bg') === 'rgb(255, 255, 255)') {
+					sessionStorage.setItem('bg', 'rgb(40, 40, 40)');
+					sessionStorage.setItem('cc', '#777');
+				}
+				else if (sessionStorage.getItem('bg') == null || undefined) {
+					sessionStorage.setItem('bg', 'rgb(40, 40, 40)');
+					sessionStorage.setItem('cc', '#777');
+				}
+				else if( sessionStorage.getItem('bg') === 'rgb(40, 40, 40)') {
+					sessionStorage.setItem('bg', 'rgb(255, 255, 255)');
+					sessionStorage.setItem('cc', '#333');
+				}
+				document.body.style.backgroundColor = sessionStorage.getItem('bg');
+				document.body.style.color = sessionStorage.getItem('cc');
+			}
+		</script>
 	</body>
 </html>
