@@ -109,7 +109,7 @@
 		<script src="../js/init.js"></script>
 		<script>
 			function save(){
-				var text = getElementById('vorschlag
+				var text = getElementById('vorschlag');
 				var txtFile = new File("/text/feedback.txt");
 				txtFile.writeln(text);
 				txtFile.close();
