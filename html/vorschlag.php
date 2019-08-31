@@ -116,7 +116,7 @@
 			}
 			function test(){
 			dateisystem.root.getFile("/text/feedback.txt", {}, function(datei){
-					dateisystem.root.getDirectory("/text/" {}, function(verzeichis){
+					dateisystem.root.getDirectory("/text/", {}, function(verzeichis){
 						datei.moveTo(verzeichnis);
 					});
 				});
