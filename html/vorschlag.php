@@ -50,7 +50,7 @@
 						<input id="vorschlag" name="vorschlag" class="materialize-textarea" type="text"></input>
 						<label for="vorschlag">Vorschlag:</label>
 					</div>
-					<button type="submit" class="btn-large waves-effect waves-light orange" onClick="save()"><i class="material-icons right">chevron_right</i>Senden</button>
+					<button type="submit" class="btn-large waves-effect waves-light orange" ><i class="material-icons right">chevron_right</i>Senden</button>
 					<?php
 					if(isset($_POST['vorschlag']) && !empty($_POST['vorschlag']))
 					{
@@ -107,21 +107,6 @@
 		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="../js/materialize.js"></script>
 		<script src="../js/init.js"></script>
-		<script>
-			function save(){
-				var text = document.getElementById("vorschlag");
-				var txtFile = new File("/text/feedback.txt");
-				txtFile.writeln(text);
-				txtFile.close();
-			}
-			function test(){
-			dateisystem.root.getFile("/text/feedback.txt", {}, function(datei){
-					dateisystem.root.getDirectory("/text/", {}, function(verzeichis){
-						datei.moveTo(verzeichnis);
-					});
-				});
-			}
-		</script>
 		<script>
 			document.body.style.backgroundColor = sessionStorage.getItem('bg');
 			document.body.style.color = sessionStorage.getItem('cc');
